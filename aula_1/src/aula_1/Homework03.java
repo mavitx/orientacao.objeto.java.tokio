@@ -20,7 +20,7 @@ public class Homework03 {
 		
 		if ((metal1 > metal2) && (metal1 > metal3)) {
 			System.out.println("O metal mais pesado é o metal 1: " + metal1);
-		} else if ((metal2 > metal1) && (metal2 > metal3)) {
+		} else if (metal2 > metal3) {
 			System.out.println("O metal mais pesado é o metal 2: " + metal2);
 		} else {
 			System.out.println("O metal mais pesado é o metal 3: " + metal3);

@@ -6,6 +6,7 @@ public class Homework02 {
 
 		//exercicio 2
 		int soma = 0;
+		
 		for (int i = 0; i <= 100; i++) {
 			 soma += i;
 		}

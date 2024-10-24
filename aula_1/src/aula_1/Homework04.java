@@ -6,10 +6,17 @@ public class Homework04 {
 
 		// exercicio 4
 		for (int i = 0; i <= 100; i++) {
-			if ((i <= 50) || (i >= 75)) {
-				System.out.println(i);
+			if ((i >= 50) && (i <= 75)) {
+				continue;
 			}
+			System.out.println(i);
 		}
+		
+//		for (int i = 0; i <= 100; i++) {
+//			if ((i <= 50) && (i >= 75)) {
+//				System.out.println(i);
+//			}
+//		}
 		
 	}
 
