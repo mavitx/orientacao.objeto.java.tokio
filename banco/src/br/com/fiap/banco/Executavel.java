@@ -5,13 +5,11 @@ public class Executavel {
 	public static void main(String[] args) {
 		
 		// instâncias
-		Conta contaMaria = new Conta();
-		contaMaria.nomeCliente = "Maria";
-		Conta contaMateus = new Conta();
-		contaMateus.nomeCliente = "Mateus";
-		Conta contaKayky = new Conta();
-		contaKayky.nomeCliente = "Kayky";
-		
+		Conta contaMaria = new Conta(222222222, "Maria", "123456");
+		Conta contaMateus = new Conta(22222, "Mateus", "963852");
+		Conta contaKayky = new Conta(966666, "Kayky", "852852");
+		contaMaria.setSaldo(1000);
+
 		// simulações
 		contaMaria.depositar(2500);
 		contaMateus.depositar(2500);

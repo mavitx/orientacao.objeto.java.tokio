@@ -3,10 +3,57 @@ package br.com.fiap.banco;
 public class Conta {
 
 	// atributos
-	String nomeCliente;
-	String cpfCliente;
-	long numeroConta;
-	double saldo;
+	private String nomeCliente, cpfCliente;
+	private long numeroConta;
+	private double saldo;
+
+	// metodo construtor 
+	public Conta(long numeroConta, String nomeCliente, String cpfCliente) {
+		this.numeroConta = numeroConta;
+		this.nomeCliente = nomeCliente;
+		this.cpfCliente = cpfCliente;
+		System.out.println("Conta " + this.nomeCliente + " criada!");
+	}
+	
+//	public String getNomeCliente() {
+//		return nomeCliente;
+//	}
+//
+//
+//	public void setNomeCliente(String nomeCliente) {
+//		this.nomeCliente = nomeCliente;
+//	}
+//
+//
+//	public String getCpfCliente() {
+//		return cpfCliente;
+//	}
+//
+//
+//	public void setCpfCliente(String cpfCliente) {
+//		this.cpfCliente = cpfCliente;
+//	}
+
+
+	public long getNumeroConta() {
+		return numeroConta;
+	}
+
+
+	public void setNumeroConta(long numeroConta) {
+		this.numeroConta = numeroConta;
+	}
+
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
 
 	// metodos
 	public boolean sacar(double valor) {
