@@ -1,10 +1,13 @@
-package br.com.fiap.banco;
+package br.com.fiap.banco.conta;
 
 import java.util.Date;
+
+import br.com.fiap.banco.cliente.Cliente;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class Conta {
+public abstract class Conta {
 
 	// atributos
 	// variavei encapsuladas
@@ -84,13 +87,6 @@ public class Conta {
 		System.out.println("Valor tranferido!");
 	}
 
-	public void exibirSaldo() {
-		System.out.println("=========================");
-		System.out.println("Nome: " + this.cliente.getNomeCliente());
-		System.out.println("Numero da conta: " + this.numeroConta);
-		System.out.println("Saldo: " + this.saldo);
-		System.out.println("Data de abertura da conta: " + this.aberturaConta);
-		System.out.println("=========================");
-	}
+	public abstract void exibirSaldo();
 
 }
