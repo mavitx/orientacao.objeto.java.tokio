@@ -2,6 +2,7 @@ package br.com.fiap.banco.conta;
 
 import java.util.Date;
 
+import br.com.fiap.banco.SaldoInsuficiente;
 import br.com.fiap.banco.cliente.Cliente;
 
 import java.text.ParseException;
@@ -67,20 +68,20 @@ public abstract class Conta {
 //	}
 
 	// metodos
-	public boolean sacar(double valor) {
-		if (valor <= this.saldo) {
-			saldo = saldo - valor;
+	public boolean sacar(double valor) throws SaldoInsuficiente {
+		if (this.saldo >= valor) {
+			this.saldo -= valor;
 			return true;
+		} else {
+			throw new SaldoInsuficiente("Saldo Insuficiente");
 		}
-		System.out.println("Valor de saque inválido ou insuficiente.");
-		return false;
 	}
 
 	public void depositar(double valor) {
 		saldo = saldo + valor;
 	}
 
-	public void transferir(Conta conta, double valor) {
+	public void transferir(Conta conta, double valor) throws SaldoInsuficiente {
 		if (this.sacar(valor)) {
 			conta.depositar(valor);
 		}

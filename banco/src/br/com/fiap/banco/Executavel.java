@@ -8,7 +8,7 @@ import br.com.fiap.banco.produto.LCI;
 
 public class Executavel {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SaldoInsuficiente {
 
 		CDB cdb = new CDB();
 		LCA lca = new LCA();
@@ -37,20 +37,26 @@ public class Executavel {
 		contaMateus.exibirSaldo();
 		contaKayky.exibirSaldo();
 
-		//transferir
+		// transferir
 		contaMaria.transferir(contaMateus, 200);
 		contaMaria.exibirSaldo();
 		contaMateus.exibirSaldo();
 
-		//investimento
+		// investimento
 		contaMateus.investimento(cdb, 100);
 		contaMateus.exibirSaldo();
 
 		contaMaria.investimento(lci, 150);
 		contaMaria.exibirSaldo();
-		
+
 		contaKayky.investimento(lca, 200);
 		contaKayky.exibirSaldo();
+
+		try {
+			contaMaria.sacar(1000);
+		} catch (SaldoInsuficiente e1) {
+			e1.printStackTrace();
+		}
 	}
 
 }
