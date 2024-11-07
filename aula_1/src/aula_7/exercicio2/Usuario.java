@@ -2,6 +2,7 @@ package aula_7.exercicio2;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 public class Usuario implements Comparable<Usuario> {
 
@@ -50,7 +51,5 @@ public class Usuario implements Comparable<Usuario> {
 		}
 		return 0;
 	}
-	
-	
 
 }

@@ -1,8 +1,10 @@
 package aula_7.exercicio2;
 
 import java.util.List;
+import java.util.Map;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 
 public class Main {
@@ -30,12 +32,25 @@ public class Main {
 			System.out.println(usuario.getNome());
 		}
 
-		System.out.println("Removendo Usuario");
+		System.out.println(" ");
+		System.out.println("Removendo Usuario...");
 		remove("Vinicius", listaUsers);
 		for (Usuario usuario : listaUsers) {
 			System.out.println(usuario.getNome());
 		}
-
+		
+		//mapa
+		Map<String, Usuario> mapa = new HashMap<>();
+		mapa.put("Maria", new Usuario(1, "Maria", "senha"));
+		mapa.put("Gabriel", new Usuario(5, "Gabriel", "1592684"));
+		mapa.put("Vinicius", new Usuario(4, "Vinicius", "haha"));
+		mapa.put("Kayky", new Usuario(3, "Kayky", "963"));
+		mapa.put("Mateus", new Usuario(2, "Mateus", "aaaaa"));
+		
+		System.out.println("");
+		Usuario usuario = mapa.get("Gabriel");
+		System.out.println(usuario.getNome());
+		
 	}
 
 	public static List<Usuario> remove(String nome, List<Usuario> lista) {
@@ -48,5 +63,6 @@ public class Main {
 		}
 		return lista;
 	}
+	
 	
 }
